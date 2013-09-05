@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+	<head>
+	    <meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	    <link rel="stylesheet" type="text/css" href="nexa-fonts.css">
+	    <link rel="stylesheet" type="text/css" href="style.css">
+	    <!--[if IE 8]>
+	    	<link rel="stylesheet" type="text/css" href="style-ie8.css">
+		<![endif]-->
+	    <link rel="stylesheet" href="css/fontello.css">
+	    <title>My Ristken</title>
+	    <script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+	    <script src="http://www.modernizr.com/downloads/modernizr-latest.js" type="text/javascript"></script>
+	    <script src="onload.js" type="text/javascript"></script>
+    	<link rel="stylesheet" href="css/animation.css"><!--[if IE 7]>
+    	<link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+	</head>
+	<body>
+		<div id="content">
+			<img id="r" src="r.svg">
+			<a href=""><div id="title"><img src="myRistkenLogo.png"/></div></a>
+			<div id="account" class="dash">
+				<i class="icon-user"></i> <div id="user-full-name">Patricia Williams</div><div id="sign-out">Sign out</div>
+			</div>
+			<div id="apps" class="dash">
+				<div class="app-wrapper"><div class="app">Reporting</div></div><div class="app-wrapper"><div class="app">Menu</div></div><div class="app-wrapper"><div class="app">SPAN 3</div></div>
+			</div>
+			<div id="login-modal" class="modal">
+				<div class="modal-title"><i class="icon-user"></i> Sign In</div>
+				<input id="username-input" class="modal-input" placeholder="Username" type="text">
+				<div class="row">
+					<button id="sign-in-btn" class="btn modal-btn modal-btn-part">Sign In</button>
+					<span class="input-wrapper"><input id="password-input" class="modal-input modal-input-part" placeholder="Password" type="password"></span>
+				</div>
+				<a href="#forgot" class="modal-footer modal-forgot">Forgot your username or password?</a>
+			</div>
+			<div id="forgot-modal" class="modal">
+				<div class="modal-title">Forgot your username or password?</div>
+				<p>No problem.  Enter your email address below and we’ll send you password reset instructions.</p>
+				<div class="row">
+					<a href="#checkemail"><button id="send-password-email-btn" class="btn modal-btn modal-btn-part">Send</button></a>
+					<span class="input-wrapper">
+						<input id="email-btn" class="modal-input modal-input-part" placeholder="Enter your email" type="text">
+					</span>
+				</div>
+			</div>
+			<div id="check-email-modal" class="modal">
+				<div class="modal-title">Please check your email</div>
+				<p>We’ve sent you an email with instructions on how to reset your password.</p>
+				<a href=""><button class="btn modal-btn">Back to Sign In</button></a>
+				<a href="#forgot" class="modal-footer modal-forgot">Haven't received the email?</a>
+			</div>
+			<div id="new-password-modal" class="modal" hidden>
+				<div class="modal-title">Choose your new password</div>
+				<input id="password-input-1" class="modal-input" placeholder="New Password" type="text">
+				<div class="row">
+					<a href="#newpasswordsuccess"><button id="sign-in-btn" class="btn modal-btn modal-btn-part">Submit</button></a>
+					<span class="input-wrapper">
+						<input id="password-input-2" class="modal-input modal-input-part" placeholder="Confirm password" type="password">
+					</span>
+				</div>
+			</div>
+			<div id="new-password-success-modal" class="modal">
+				<div class="modal-title">Congratulations</div>
+				<p>Your password has been reset successfully.</p>
+				<a href=""><button class="btn modal-btn">Continue <div class="next-icon"></div></button></a>
+			</div>
+		</div>
+	</body>
+</html>

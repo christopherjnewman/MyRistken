@@ -1,0 +1,336 @@
+*{
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+
+	font-family: 'Nexa Light', sans-serif;
+	font-weight: 200;
+}
+body{
+	margin:0;
+	background-color: #212121;
+}
+body, html, #content{
+	height: 100%;
+	overflow-x: hidden;
+}
+a img{
+	border:none;
+}
+#content{
+	width:100%;
+	height: 100%;
+	/* fallback */
+	background-color: #EEEEEE;
+	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(radial, center center, 0, center center, 100%, from(#fefefe), to(#c7c9cb));
+	/* Safari 5.1+, Chrome 10+ */
+	background: -webkit-radial-gradient(circle, #fefefe, #c7c9cb);
+	/* Firefox 3.6+ */
+	background: -moz-radial-gradient(circle, #fefefe, #c7c9cb);
+	/* IE 10 */
+	background: -ms-radial-gradient(circle, #fefefe, #c7c9cb);
+}
+
+	.modal, #apps{
+		visibility: hidden;
+	}
+	#r{
+		position: absolute;
+		height: 80%;
+		max-width: 100%;
+		bottom:0px;
+		right: 0px;
+		z-index: 1;
+		opacity: 0.2;
+		overflow: hidden;
+	}
+	#title{
+		position: absolute;
+		top:10px;
+		left:10px;
+		padding:20px;
+		font-size: 28px;
+		font-weight: 400;
+		font-family: 'Nexa Regular', sans-serif;
+		z-index: 3;
+	}
+	#title, .modal-forgot{
+		color:#ce1126;
+	}
+		#title i{
+			color:#333;
+			font-weight: 100;
+			font-family: 'Nexa Light Italic', sans-serif;
+		}
+	#account{
+		position: absolute;
+		right:10px;
+		top:10px;
+		padding: 20px;
+		font-size: 20px;
+		color:#333;
+		visibility: hidden;
+	}
+		#user-full-name, #sign-out{
+			display: inline-block;
+		}
+		#sign-out{
+			margin-left: 10px;
+			color:#ce1126;
+		}
+		@media(max-width: 500px){
+			#account .icon-user{
+				display: none;
+			}
+			#sign-out{
+				display: block;
+				text-align: right;
+				margin-top: 5px;
+			}
+		}
+	#apps{
+		position: relative;
+		top:150px;
+		z-index: 3;
+		width:820px;
+		margin: 0 auto;
+	}
+		.app-wrapper{
+			position: relative;
+			display: inline-block;
+			width: 33%;
+			height:200px;
+			line-height: 200px;
+			color:#FFF;
+			margin-top: 10px;
+			font-size: 20px;
+			cursor: pointer;
+			top: -20px;
+			-webkit-transition:top .5s;
+			transition:top .5s;
+		}
+		.app{
+			background-color:#ce1126;
+			border-radius: 10px;
+			height:100%;
+			width:200px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.app-down{
+			top: 0px !important;
+		}
+	@media(max-width: 900px){
+		#apps{
+			width:700px;
+		}		
+	}
+	@media(max-width: 750px){
+		#apps{
+			width:100%;
+			padding: 0px 50px;
+		}	
+			.app-wrapper, .app{
+				width: 100%;
+			}
+	}
+	.modal{
+		width:600px;
+		height:300px;
+		margin-top: -150px;
+		border-radius: 15px;
+		background-color: #333;
+		padding:35px;
+		margin: auto;
+		position: absolute;
+		top:0;left:0;right:0;bottom: 0;
+		z-index: 2;
+	}
+	#login-modal{
+		margin: 0 auto;
+		height:310px;
+		margin-top: -170px;
+		top:50% !important;
+		-webkit-transition:margin-top .7s;
+		transition:margin-top .7s;
+	}
+	.login-modal-centered{
+		margin-top: -155px !important;
+	}
+	#new-password-modal{
+		height:300px;
+	}
+	#new-password-success-modal{
+		height:260px;
+	}
+	@media(max-width: 800px){
+		.modal{
+			width:400px;
+		}		
+	}
+	@media(max-width: 450px){
+		.modal{
+			width:350px;
+		}		
+	}
+		.modal-title{
+			color:#FFF;
+			margin-bottom: 30px;
+			font-size: 28px;
+			width: 100%;
+			text-align: center;
+		}
+		#forgot-modal{
+			padding: 40px;
+		}
+		#forgot-modal .modal-title, #check-email-modal .modal-title{
+			margin-top: 0px;
+			margin-bottom: 0px;
+			text-align: left;
+		}
+		.modal p{
+			color: #bfbfbf;
+			font-size: 20px;
+			line-height: 200%;
+		}
+		.modal-input{
+			width:100%;
+			background-color: #a5a5a5;
+			padding: 15px;
+			padding-left: 30px;
+			margin: 10px 0px;
+		}
+		.input-wrong{
+			-webkit-animation: fade-transition 2s;
+			animation: fade-transition 2s;
+		}
+		@-webkit-keyframes fade-transition {
+		    0%, 100% { background-color: #A5A5A5; }
+		    20%, 80% { background-color: #D76868; }
+		}
+		.modal-input:focus{
+			outline:0;
+		}
+		.modal-input::-webkit-input-placeholder { /* WebKit browsers */
+		    color:    #505050;
+		    font-style: italic;
+		}
+		.modal-input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		    color:    #505050;
+		    font-style: italic;
+		}
+		.modal-input::-moz-placeholder { /* Mozilla Firefox 19+ */
+		    color:    #505050;
+		    font-style: italic;
+		}
+		.modal-input:-ms-input-placeholder { /* Internet Explorer 10+ */
+		    color:    #505050;
+		    font-style: italic;
+		}
+		.modal-input, .btn{
+			font-size: 19px;
+			border:none;
+			border-radius: 30px;
+		}
+		.btn{
+			padding:15px;
+			border-radius: 30px;
+		}
+		.row{
+			position: relative;
+			width: 100%;
+		}
+			.input-wrapper{
+				display: block;
+			    overflow: hidden;
+			    padding-right:8px;
+			    margin: 10px 0px;
+			}
+				.modal-input-part{
+					width: 100%;
+					border-top-right-radius: 0px;
+					border-bottom-right-radius: 0px;
+					margin:0px;
+				}
+			.modal-btn{
+				background-color:#359bd3;
+				color:#FFF;
+				font-weight: 100;
+				padding:15px 25px;
+				margin-top: 0px;
+				cursor: pointer;
+			}
+			.modal-btn-part{
+				border-top-left-radius: 0px;
+				border-bottom-left-radius: 0px;
+				float:right;
+			}
+			.modal-btn:hover{
+				background-color:#55b1e4;
+			}
+		.modal-forgot{
+			display: block;
+			margin-top: 30px;
+			font-size: 20px;
+			font-weight: 100;
+			text-decoration: none;
+			text-align: center;
+		}
+		#check-email-modal .modal-forgot{
+			margin-top: 20px;
+			text-align: left;
+		}
+.next-icon{
+	display: inline-block;
+	width:25px;
+	height:25px;
+	line-height: 25px;
+	border-radius: 50%;
+	border:2px solid #FFF;
+	text-align: center;
+	font-size: 20px;
+	margin-left: 5px;
+	color: #FFF;
+}
+.next-icon:before{
+	content:"\2192";
+}
+.btn-loading{
+        background-color: rgba(129, 195, 231, 0.4) !important;
+        -webkit-animation: loading-stripes 2s linear infinite;
+        background-image: -webkit-linear-gradient(-45deg,rgba(255, 255, 255, 0.2) 25%,
+                                                 transparent 25%,
+                                                 transparent 50%,
+                                                 rgba(255, 255, 255, 0.2) 50%,
+                                                 rgba(255, 255, 255, 0.2) 75%,
+                                                 transparent 75%,
+                                                 transparent) !important;
+        background-size: 44px 44px;
+}
+@-webkit-keyframes loading-stripes {
+  from { background-position: 44px 0; }
+  to { background-position: 0 0; }
+}
+@media(min-width:1400px){
+	#apps{
+		width:80%;
+	}
+	.app-wrapper{
+		height:250px;
+		line-height: 250px;
+	}
+	.app{
+		width:270px;
+	}
+}
+@media(min-width:2100px){
+	.app-wrapper{
+		height:350px;
+		line-height: 350px;
+	}
+	.app{
+		width:370px;
+	}
+
+}
