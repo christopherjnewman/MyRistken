@@ -1,0 +1,69 @@
+#r{
+	opacity: 1.0;
+}
+.modal{
+	background-color: #640B5F;
+}
+.modal-title{
+	font-family: 'Nexa Bold';
+}
+#new-password-modal .modal-title, #new-password-success-modal .modal-title{
+	font-family: 'Nexa Light';
+}
+.modal-input{
+	background-color: #E2E2E2;
+}
+.modal-input::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #828282;
+    font-style: normal;
+}
+.modal-input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #828282;
+    font-style: normal;
+}
+.modal-input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #828282;
+    font-style: normal;
+}
+.modal-input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #828282;
+    font-style: normal;
+}
+.modal-footer{
+	color:#e8d4a3;
+	text-align: left;
+}
+.modal p{
+	color:#e2e2e2;
+}
+#title img{
+	height
+}
+#title-logo{
+	height: auto;
+	height:25px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+#new-password-success-modal .modal-title{
+	text-align: left;
+}
+#new-password-success-modal .modal-button{
+	padding:9px 25px;
+}
+#sign-out{
+	color:#650360;
+}
+.app{
+	background-color: #650360;
+}
+.nav-item-selected{
+	border-top:4px solid #640B5F;
+	color:#640B5F;
+}
+.settings-menu-item-selected{
+	background-color: #640B5F;
+}
+#my-applications h1{
+	color:#640B5F;
+}

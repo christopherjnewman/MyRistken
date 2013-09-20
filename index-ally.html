@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+	<head>
+	    <meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	    <link rel="stylesheet" type="text/css" href="nexa-fonts.css">
+	    <link rel="stylesheet" type="text/css" href="style.css">
+	    <link rel="stylesheet" type="text/css" href="style-ally.css">
+	    <!--[if IE 8]>
+	    	<link rel="stylesheet" type="text/css" href="style-ie8.css">
+		<![endif]-->
+	    <link rel="stylesheet" href="css/fontello.css">
+	    <title>Ally - My Ristken</title>
+	    <script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+	    <script src="http://www.modernizr.com/downloads/modernizr-latest.js" type="text/javascript"></script>
+    	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+    	<link href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+	    <script src="onload.js" type="text/javascript"></script>
+    	<link rel="stylesheet" href="css/animation.css"><!--[if IE 7]>
+    	<link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+	</head>
+	<body>
+		<div id="content">
+			<img id="r" src="a.svg">
+			<a href="">
+				<div id="title">
+					<img src="allyLogo.png"/>
+					<img id="title-logo" src="myRistkenLogoGrey.png"/>
+				</div>
+			</a>
+			<div id="nav" class="dash">
+				<a href="#dash">
+					<div id="dashboard-link" class="nav-item">
+						<i class="icon-th-large-outline"></i> Dashboard
+					</div>
+				</a>
+				<a href="#settings">
+					<div id="settings-link" class="nav-item">
+						<i class="icon-cog"></i> Settings
+					</div>
+				</a>
+				<div id="account-link" class="nav-item">
+					<i class="icon-user"></i> <div id="user-full-name">Patricia Williams</div>
+				</div>
+			</div>
+			<div id="apps" class="hidden content">
+				<div id="reporting-app" class="app-wrapper"><div class="app">Reporting</div></div><div id="menu-app" class="app-wrapper"><div class="app">Menu<img class="app-arrow" src="down-arrow.svg"></div>				<div id="select-dealership" class="tooltip hidden">
+					<div class="tooltip-title">Select Dealership</div>
+					<ul class="tooltip-list">
+						<li>ABC Motors</li>
+						<li>Alberterson’s Cheverolet</li>
+						<li>Barkley Cars</li>
+						<li>Bronson Creek Cheverolet</li>
+						<li>Chris Cornell Honda</li>
+						<li>Carson City Motors</li>
+						<li>Carson City Motors</li>
+						<li>Carson City Motors</li>
+						<li>Carson City Motors</li>
+						<li>Carson City Motors</li>
+						<li>Carson City Motors</li>
+						<li>Carson City Motors</li>
+					</ul>
+				</div></div><div id="span3-app" class="app-wrapper"><div class="app">SPAN 3</div></div>
+			</div>
+			<div id="settings" class="hidden content">
+				<div id="settings-menu">
+					<div class="settings-menu-item settings-menu-item-header"><i class="icon-cog"></i> Settings</div>
+					<div class="settings-menu-item settings-menu-item-selected">My Applications</div>
+					<div class="settings-menu-item">My Account</div>
+				</div>
+				<div id="my-applications">
+					<table id="my-applications-table">
+						<h1>My Applications</h1>
+						<thead>
+							<tr>
+								<th width="32%" scope="col">Application</th>
+								<th width="32%" scope="col">Dealership</th>
+								<th width="32%" scope="col">User</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Menu</td>
+								<td>John Smith Honda</td>
+								<td>MP8450</td>
+							</tr>
+							<tr>
+								<td>Menu</td>
+								<td>Dallas Cheverolet</td>
+								<td>MP1117</td>
+							</tr>
+							<tr>
+								<td>Menu</td>
+								<td>Murray Street Motors</td>
+								<td>MP4411</td>
+							</tr>
+							<tr>
+								<td>Reporting</td>
+								<td>Kingston Ford</td>
+								<td>MP1678</td>
+							</tr>
+							<tr>
+								<td>Reporting</td>
+								<td>Kingston Ford</td>
+								<td>MP1678</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div id="login-modal" class="modal">
+				<div class="modal-title"><i class="icon-user"></i> Sign In</div>
+				<input id="username-input" class="modal-input" placeholder="Username" type="text">
+				<div class="row">
+					<button id="sign-in-btn" class="btn modal-btn modal-btn-part">Sign In</button>
+					<span class="input-wrapper"><input id="password-input" class="modal-input modal-input-part" placeholder="Password" type="password"></span>
+				</div>
+				<a href="#forgot" class="modal-footer modal-forgot">Forgot your username or password?</a>
+			</div>
+			<div id="forgot-modal" class="modal">
+				<div class="modal-title">Forgot your username or password?</div>
+				<p>No problem.  Enter your email address below and we’ll send you password reset instructions.</p>
+				<div class="row">
+					<a href="#checkemail"><button id="send-password-email-btn" class="btn modal-btn modal-btn-part">Send</button></a>
+					<span class="input-wrapper">
+						<input id="email-btn" class="modal-input modal-input-part" placeholder="Enter your email" type="text">
+					</span>
+				</div>
+			</div>
+			<div id="check-email-modal" class="modal">
+				<div class="modal-title">Please check your email</div>
+				<p>We’ve sent you an email with instructions on how to reset your password.</p>
+				<br>
+				<a href="#forgot" id="did-not-receive" class="modal-footer modal-forgot">Haven't received the email?</a>
+			</div>
+			<div id="new-password-modal" class="modal">
+				<div class="modal-title">Choose your new password</div>
+				<input id="password-input-1" class="modal-input" placeholder="New Password" type="text">
+				<div class="row">
+					<a href="#newpasswordsuccess"><button id="sign-in-btn" class="btn modal-btn modal-btn-part">Submit</button></a>
+					<span class="input-wrapper">
+						<input id="password-input-2" class="modal-input modal-input-part" placeholder="Confirm password" type="password">
+					</span>
+				</div>
+			</div>
+			<div id="new-password-success-modal" class="modal">
+				<div class="modal-title">Congratulations</div>
+				<p>Your password has been reset successfully.</p>
+				<a href=""><button class="btn modal-btn">Continue <div class="next-icon"></div></button></a>
+			</div>
+		</div>
+	</body>
+</html>
