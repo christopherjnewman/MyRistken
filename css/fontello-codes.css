@@ -1,4 +1,5 @@
 
+.icon-th-1:before { content: '\e803'; } /* '' */
+.icon-cog:before { content: '\e801'; } /* '' */
 .icon-user:before { content: '\e800'; } /* '' */
-.icon-cog:before { content: '\e803'; } /* '' */
-.icon-th-large-outline:before { content: '\e801'; } /* '' */
+.icon-search:before { content: '\e802'; } /* '' */

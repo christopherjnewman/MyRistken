@@ -1,8 +1,27 @@
+@font-face {
+    font-family: "Nexa Light";
+    src: url(nexa-web-fonts/NexaLight/Nexa-Light.ttf),
+    	 url(nexa-web-fonts/NexaLight/Nexa-Light.eot);
+}
+@font-face {
+    font-family: "Nexa Light Italic";
+    src: url(nexa-web-fonts/NexaLight/Nexa-Light-Italic.ttf),
+    	 url(nexa-web-fonts/NexaLight/Nexa-Light-Italic.eot);
+}
+@font-face {
+    font-family: "Nexa Regular";
+    src: url(nexa-web-fonts/NexaLight/Nexa-Regular.ttf),
+    	 url(nexa-web-fonts/NexaLight/Nexa-Regular.eot);
+}
+@font-face {
+    font-family: "Nexa Bold";
+    src: url(nexa-web-fonts/NexaLight/Nexa-Bold.ttf),
+    	 url(nexa-web-fonts/NexaLight/Nexa-Bold.eot);
+}
 *{
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 	box-sizing:border-box;
-
 	font-family: 'Nexa Light', sans-serif;
 	font-weight: 200;
 }
@@ -12,13 +31,14 @@ body{
 }
 body, html, #content{
 	height: 100%;
-	overflow-x: hidden;
+/* 	overflow-x: hidden; */
 }
+
 a img{
 	border:none;
 }
 .hidden{
-	display: none;
+	display: none !important;
 }
 #content{
 	width:100%;
@@ -26,13 +46,14 @@ a img{
 	/* fallback */
 	background-color: #EEEEEE;
 	/* Safari 4-5, Chrome 1-9 */
-	background: -webkit-gradient(radial, center center, 0, center center, 100%, from(#fefefe), to(#c7c9cb));
+	background: -webkit-gradient(radial, center center, 0, center center, 100%, from(#ffffff), to(#d1d3d5));
 	/* Safari 5.1+, Chrome 10+ */
-	background: -webkit-radial-gradient(circle, #fefefe, #c7c9cb);
+	background: -webkit-radial-gradient(circle, #fefefe, #d1d3d5);
 	/* Firefox 3.6+ */
-	background: -moz-radial-gradient(circle, #fefefe, #c7c9cb);
+	background: -moz-radial-gradient(circle, #fefefe, #d1d3d5);
 	/* IE 10 */
-	background: -ms-radial-gradient(circle, #fefefe, #c7c9cb);
+	background: -ms-radial-gradient(circle, #fefefe, #d1d3d5);
+	min-width: 960px;
 }
 
 	.modal, #apps{
@@ -52,7 +73,7 @@ a img{
 		position: absolute;
 		top:10px;
 		left:10px;
-		padding:20px;
+		padding:5px 20px 20px 20px;
 		font-size: 28px;
 		font-weight: 400;
 		font-family: 'Nexa Regular', sans-serif;
@@ -73,13 +94,17 @@ a img{
 		font-size: 20px;
 		color:#333;
 		visibility: hidden;
-	}
+	}	
+		#nav a{
+			text-decoration: none;
+		}
 		.nav-item{
 			padding: 15px 0px;
-			margin-right: 20px;
+			margin-right: 22px;
 			display: inline-block;
 			cursor: pointer;
 			color:#000;
+			font-size: 24px;
 		}
 		.nav-item-selected{
 			border-top:4px solid red;
@@ -107,7 +132,7 @@ a img{
 		}
 	#settings{
 		position: relative;
-		top:150px;
+		top:110px;
 		z-index: 3;
 	}
 	#apps{
@@ -459,39 +484,51 @@ a img{
 .settings-menu-item{
 	display: inline-block;
 }
+
+#settings-menu a {
+	margin-left: 20px;
+	text-decoration: none !important;
+}
 .settings-menu-item-selected{
 	border-radius: 20px;
 	background-color: #CCC;
 	color:#FFF;
 }
-#settings-menu, #my-applications{
+#settings-menu, #my-applications, #my-account{
 	display: inline-block;
 	vertical-align: top;
 }
 #settings-menu{
 	padding-left: 30px;
 	width: 20%;
+	max-width: 250px;
 }
-	.settings-menu-item-header{
-		font-weight: bold;
-		color:#000;
-		font-size: 24px;
-	}
 	.settings-menu-item{
 		font-size: 22px;
 		padding: 7px 15px;
-		margin:5px 0px;
+		margin:0px 0px;
+	}
+	.settings-menu-item-header{
+		font-family:'Nexa Light', sans-serif;
+		color:#000 !important;
+		font-size: 26px;
+		padding-left: 0px;
+		padding-top:0px;
+		margin-top:0px !important;
+		margin-bottom: 10px;
 	}
 #my-applications{
 	min-width: 400px;
 	width: 70%;
 	background-color: #FCFCFD;
-	-webkit-box-shadow: 0px 0px 7px 0px rgba(204,204,204,1);
-	-moz-box-shadow: 0px 0px 7px 0px rgba(204,204,204,1);
-	box-shadow: 0px 0px 7px 0px rgba(204,204,204,1);
+	-webkit-box-shadow: 0px 0px 4px 0px rgba(204,204,204,1);
+	-moz-box-shadow: 0px 0px 4px 0px rgba(204,204,204,1);
+	box-shadow: 0px 0px 4px 0px rgba(204,204,204,1);
 	margin-left: 40px;
 	border-radius: 10px;
+	max-width: 1100px;
 }
+
 table.dataTable thead th{
 	border-bottom:none !important;
 }
@@ -502,16 +539,46 @@ table.dataTable{
 	margin:5px 0px;
 	margin-top: 15px;
 	text-align: center;
-	font-family: 'Nexa Bold', sans-serif;
+	font-family: 'Nexa Regular', sans-serif;
+	font-size: 24px;
 }
-#my-applications input{
-	border:none;
-	border-bottom:2px solid #CCC;
+
+.add-application {
+	float: right;
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 20px;
+}
+.add-application a {
+	display: block;
+	padding-right: 20px;
+	text-decoration: none;
+	width:25px;
+	overflow: hidden;
+	text-indent: -99999px;
+	background:transparent url(add.png) no-repeat;
+}
+.search-wrapper{
+	border:1px solid #CCC;
+	background-color: #F4F4F4;
+	border-radius: 16px;
 	font-size: 16px;
 	margin-bottom: 5px;
+	width:auto;
+	margin-right: 15px;
+	text-align: left;
 }
-#my-applications input:focus{
-	border-bottom:2px solid #3798c7;
+.search-wrapper .icon-search{
+	display: inline-block;
+	margin: 5px;
+	margin-left: 6px;
+}
+#my-applications input{
+	display: inline-block;
+	border:none;
+	background-color: transparent;
+	font-size: 16px;
+	width:auto;
 }
 #my-applications input:active, #my-applications input:focus{
 	outline: 0;
@@ -520,23 +587,242 @@ table.dataTable{
 #my-applications-table_length, #my-applications-table_info, #my-applications-table_paginate{
 	display: none;
 }
-table.dataTable tr.odd {
-	background-color: transparent !important;
+
+#my-applications-table_filter {
+	margin-right: 50px;
+	margin-top:-35px;
 }
-table.dataTable tr.odd td.sorting_1, table.dataTable tr.even td.sorting_1 {
+
+table.dataTable tr.odd, table.dataTable tr.odd td.sorting_1, table.dataTable tr.even td.sorting_1 {
 	background-color: transparent !important;
-	color:#3798c7;
 }
 table.dataTable td {
 	padding: 10px!important;
 	font-size: 20px;
 	border-top:2px solid #EEEEEF;
-	font-weight: bold;
+	font-weight: normal;
+	font-family: 'Nexa Regular', sans-serif;
 }
 thead{
 	color:#3798c7 !important;
 }
 thead th{
-	padding: 10px !important;
+	padding: 10px 10px 10px 25px !important;
 	text-align: left;
+}
+.dataTable tr td:first-child{
+	padding-left: 25px !important;
+}
+/*.th-highlight{
+	background-color: #3797C6;
+	border-radius: 15px;
+	color:white;
+	padding:5px 15px;
+}*/
+.down-arrow:before{
+	content: "\25BE";
+}
+.down-arrow{
+	position: relative;
+	bottom: 5px;
+	left: -9px;
+	font-style: normal;
+	font-size: 14px;
+}
+.delete-application{
+	text-align: right;
+	cursor: pointer;
+}
+.delete-application img{
+	margin-right: 10px;
+}
+#my-account{
+	width: 70%;
+	max-width: 1100px;
+}
+#my-account div{
+	padding:30px;
+	padding-top: 15px;
+	background-color: #FCFCFD;
+	-webkit-box-shadow: 0px 0px 7px 0px rgba(204,204,204,1);
+	-moz-box-shadow: 0px 0px 7px 0px rgba(204,204,204,1);
+	box-shadow: 0px 0px 7px 0px rgba(204,204,204,1);
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+#my-account *{
+	font-family: 'Nexa Regular', sans-serif;
+	font-size: 18px;
+}
+#my-account h3{
+	text-align: center;
+	font-size: 24px;
+	margin-top: 0px;
+}
+#my-account .row{
+	box-shadow: none;
+	padding: 0px;
+}
+#my-account input{
+	border:none;
+	border-bottom:1px solid #B7B7B7;
+	margin-left: 5px;
+	width: calc(100% - 240px);
+}
+#my-account input:focus{
+	outline:0;
+}
+#email-area a{
+	text-decoration: none;
+}
+#password-area label{
+	display: inline-block;
+	width:220px;
+	text-align: right;
+}
+.button-wrapper{
+	min-height: 20px;
+}
+#change-password-btn{
+	border-radius: 5px;
+	padding:10px 10px;
+	font-size: 18px;
+	position: absolute;
+	right:18px;
+	font-family: 'Nexa Light', sans-serif;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	margin-right: 0.1em !important;
+}
+#current-username{
+	color:#6d6d6d;
+	white-space: nowrap;
+}
+#account-tooltip{
+	width:auto;
+	height:auto;
+	margin-left: 0px;
+	left:auto;
+	right:10px;
+	z-index: 4;
+	font-size: 20px;
+}
+#account-tooltip:before{
+	left:auto;
+	right:20px;
+}
+#account-tooltip:after{
+	left:auto;
+	right:22px;
+}
+#account-tooltip .tooltip-list{
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+}
+#account-tooltip .tooltip-list li{
+	margin-right: 0px;
+	padding:15px 15px;
+}
+#account-tooltip .tooltip-list li:first-child{
+	padding-top: 20px;
+}
+#account-tooltip .tooltip-list li:last-child{
+	border-bottom: none;
+}
+.good-alert{
+	background-color: #EBF5EE !important;
+	padding: 20px 30px !important;
+	position: relative;
+}
+	.good-alert h4{
+		color:#46A355;
+		font-family: 'Nexa Bold', sans-serif;
+		font-size: 18px;
+		margin: 0px;
+		margin-bottom: 10px;
+	}
+	.good-alert p{
+		margin: 0px;
+	}
+	.good-alert .close{
+		position: absolute;
+		top:15px;
+		right:15px;
+		cursor: pointer;
+	}
+.add-application{
+	cursor: pointer;
+}
+#shade{
+	position: absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	z-index: 3;
+	background-color: rgba(0,0,0,0.5);
+}
+#new-application-modal{
+	background-color: #FFFFFF;
+	padding: 0px;
+	z-index: 4;
+	height: 380px;
+}
+#new-application-modal *{
+	font-family: 'Nexa Regular', sans-serif;
+}
+	.modal-header{
+		border-top-right-radius: 10px;
+		border-top-left-radius: 10px;
+		padding: 15px;
+		margin: 0px;
+		width: 100%;
+		background-color: #F4F4F4;
+		text-align: center;
+		font-family: 'Nexa Regular', sans-serif;
+		font-size: 22px;
+	}
+	.modal-body{
+		padding:22px;
+		border-top:2px solid #DDDDDD;
+		border-bottom:2px solid #DDDDDD;
+	}
+	.half-row{
+		display: inline-block;
+		width: 49%;
+		padding-right: 10px;
+	}
+		.half-row h5{
+			margin: 0px;
+			margin-top: 5px;
+			font-size: 22px;
+			font-family: 'Nexa Bold', sans-serif;
+		}
+	#new-application-modal .modal-input{
+		border-radius: 5px;
+		padding: 10px 10px;
+		background-color: #F8F8F8;
+		border:2px solid #DDD;
+		margin-top: 0px;
+	}
+	.modal-footer{
+		padding: 20px;
+	}
+	#new-application-modal .modal-btn{
+		border-radius:5px;
+		font-size: 22px;
+		padding:10px 30px;
+	}
+	.cancel-btn{
+		background-color: transparent;
+		color:#000;
+	}
+.dataTable tbody tr:last-child td:first-child{
+	border-bottom-left-radius:10px;
+}
+.dataTable tbody tr:last-child td:last-child{
+	border-bottom-right-radius:10px;
 }
